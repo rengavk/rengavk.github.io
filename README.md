@@ -1,8 +1,6 @@
 # Renganayaki Venkatakrishnan - Data Analysis Portfolio
 
-## About This Portfolio Template
-
-This portfolio is designed to demonstrate skills in:
+Welcome to my portfolio, I have published works here to showcase my skills in:
 - Data visualization and storytelling
 - Data modeling and analysis
 - Creating interactive, professional dashboards
@@ -18,6 +16,9 @@ This portfolio is designed to demonstrate skills in:
 
 ### Project Three: Supply Chain — Multi-Echelon Inventory Simulator
 *Compare base-stock vs RL policy; show stockout, holding cost, lead-time risk, and CO₂ per km shipped.*
+
+### Project four: Early Warning System for Cardiac Arrest
+*This project uses patient vitals (HR, BP, SpO₂, ECG features) to predict the risk of cardiac arrest in the next 6–24 hours.*
 
 
 ## 🛠️ Skills
