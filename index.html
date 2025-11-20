@@ -569,15 +569,229 @@
                     <a href="https://github.com/rengavk" target="_blank" class="contact-btn">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
+                    .projects-grid {
+                    grid-template-columns: 1fr;
+                    }
 
-    <footer>
-        <p>&copy; 2025 Renganayaki Venkatakrishnan. All rights reserved.</p>
-    </footer>
+                    .about-content {
+                    padding: 30px;
+                    }
+                    }
 
-</body>
+                    html {
+                    scroll-behavior: smooth;
+                    }
+                    </style>
+                    </head>
+
+                    <body>
+
+                        <section class="hero">
+                            <div class="hero-content">
+                                <h1>Renganayaki Venkatakrishnan</h1>
+                                <p class="subtitle">Data Science | Business Intelligence | Statistics</p>
+
+                                <div class="social-links">
+                                    <a href="https://www.linkedin.com/in/renganayaki-venkatakrishnan-349a61186/"
+                                        target="_blank">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://github.com/rengavk" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="mailto:renganayaki.venkatakrishnan00@gmail.com">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <div class="container">
+                                <h2 class="section-title">About Me</h2>
+                                <div class="about-content">
+                                    <p>I'm a data professional with expertise in transforming complex datasets into
+                                        actionable insights. My
+                                        work focuses on creating interactive visualizations and data-driven stories that
+                                        help organizations
+                                        make informed decisions.</p>
+                                    <p>With experience in Power BI, SQL, and data modeling, I specialize in developing
+                                        comprehensive reports
+                                        that reveal hidden patterns and trends in data. I'm passionate about leveraging
+                                        machine learning,
+                                        NLP, and ethical AI to solve real-world problems.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section" style="background: var(--bg-white);">
+                            <div class="container">
+                                <h2 class="section-title">Technical Skills</h2>
+                                <div class="skills-container">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Machine Learning</span>
+                                    <span class="skill-tag">XGBoost</span>
+                                    <span class="skill-tag">LSTM</span>
+                                    <span class="skill-tag">NLP</span>
+                                    <span class="skill-tag">BERT</span>
+                                    <span class="skill-tag">Differential Privacy</span>
+                                    <span class="skill-tag">Power BI</span>
+                                    <span class="skill-tag">Tableau</span>
+                                    <span class="skill-tag">SQL</span>
+                                    <span class="skill-tag">Pandas</span>
+                                    <span class="skill-tag">PyTorch</span>
+                                    <span class="skill-tag">TensorFlow</span>
+                                    <span class="skill-tag">Streamlit</span>
+                                    <span class="skill-tag">SHAP</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section projects-section">
+                            <div class="container">
+                                <h2 class="section-title">Featured Projects</h2>
+                                <div class="projects-grid">
+
+                                    <div class="project-card">
+                                        <img src="assets/images/aviation-feature-importance.png" alt="Aviation"
+                                            class="project-image">
+                                        <div class="project-content">
+                                            <h3 class="project-title">Aviation — Turnaround Delay Root-Cause Miner &
+                                                Optimizer</h3>
+                                            <div class="project-tags">
+                                                <span class="tag">XGBoost</span>
+                                                <span class="tag">SHAP</span>
+                                                <span class="tag">Streamlit</span>
+                                            </div>
+                                            <p class="project-description">ML-powered delay predictor achieving 99.99%
+                                                accuracy. Identifies
+                                                root causes and provides insights to reduce delays by 6-12%, potentially
+                                                saving $111K-$223K
+                                                annually.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://github.com/rengavk/aviation-turnaround-optimizer"
+                                                    target="_blank" class="btn btn-primary">
+                                                    <i class="fab fa-github"></i> View Code
+                                                </a>
+                                                <a href="https://github.com/rengavk/aviation-turnaround-optimizer#readme"
+                                                    target="_blank" class="btn btn-secondary">
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <img src="assets/images/mental-health-viz.png" alt="Mental Health"
+                                            class="project-image">
+                                        <div class="project-content">
+                                            <h3 class="project-title">Mental Health — Ethical Crisis-Signal NLP</h3>
+                                            <div class="project-tags">
+                                                <span class="tag">DistilBERT</span>
+                                                <span class="tag">Differential Privacy</span>
+                                                <span class="tag">AI Ethics</span>
+                                            </div>
+                                            <p class="project-description">Privacy-preserving crisis detection using
+                                                differential privacy (ε
+                                                <3.0) and DistilBERT. Includes comprehensive safety policy and ethical
+                                                    AI framework.</p>
+                                                    <div class="project-buttons">
+                                                        <a href="https://github.com/rengavk/mental-health-nlp"
+                                                            target="_blank" class="btn btn-primary">
+                                                            <i class="fab fa-github"></i> View Code
+                                                        </a>
+                                                        <a href="https://github.com/rengavk/mental-health-nlp/blob/main/SAFETY_POLICY.md"
+                                                            target="_blank" class="btn btn-secondary">
+                                                            Safety Policy
+                                                        </a>
+                                                    </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <img src="assets/images/supply-chain-viz.png" alt="Supply Chain"
+                                            class="project-image">
+                                        <div class="project-content">
+                                            <h3 class="project-title">Supply Chain — Multi-Echelon Inventory Simulator
+                                            </h3>
+                                            <div class="project-tags">
+                                                <span class="tag">SimPy</span>
+                                                <span class="tag">OR-Tools</span>
+                                                <span class="tag">Optimization</span>
+                                            </div>
+                                            <p class="project-description">Discrete-event simulation reducing stockouts
+                                                by 30%. Uses SimPy
+                                                and OR-Tools for optimization. Service level improvement from 85% to
+                                                95%.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://github.com/rengavk/supply-chain-simulator"
+                                                    target="_blank" class="btn btn-primary">
+                                                    <i class="fab fa-github"></i> View Code
+                                                </a>
+                                                <a href="https://github.com/rengavk/supply-chain-simulator#readme"
+                                                    target="_blank" class="btn btn-secondary">
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="project-card">
+                                        <img src="assets/images/project-placeholder-4.png" alt="Cardiac Arrest"
+                                            class="project-image">
+                                        <div class="project-content">
+                                            <h3 class="project-title">Early Warning System for Cardiac Arrest</h3>
+                                            <div class="project-tags">
+                                                <span class="tag">LSTM</span>
+                                                <span class="tag">Healthcare AI</span>
+                                                <span class="tag">TensorFlow</span>
+                                            </div>
+                                            <p class="project-description">LSTM-based system providing 30-minute advance
+                                                warning using
+                                                real-time vital signs. Achieves 85%+ precision, enabling timely ICU
+                                                interventions.</p>
+                                            <div class="project-buttons">
+                                                <a href="https://github.com/rengavk/cardiac-arrest-prediction"
+                                                    target="_blank" class="btn btn-primary">
+                                                    <i class="fab fa-github"></i> View Code
+                                                </a>
+                                                <a href="https://github.com/rengavk/cardiac-arrest-prediction#readme"
+                                                    target="_blank" class="btn btn-secondary">
+                                                    Read More
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section contact-section">
+                            <div class="container">
+                                <div class="contact-content">
+                                    <h2 class="section-title">Let's Connect</h2>
+                                    <p class="contact-info">Interested in collaborating? I'd love to hear from you!</p>
+                                    <div class="contact-buttons">
+                                        <a href="mailto:renganayaki.venkatakrishnan00@gmail.com" class="contact-btn">
+                                            <i class="fas fa-envelope"></i> Email
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/renganayaki-venkatakrishnan-349a61186/"
+                                            target="_blank" class="contact-btn">
+                                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                                        </a>
+                                        <a href="https://github.com/rengavk" target="_blank" class="contact-btn">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <footer>
+                            <p>&copy; 2025 Renganayaki Venkatakrishnan. All rights reserved.</p>
+                        </footer>
+                        <!-- Updated: v1.1 - Force Refresh -->
+                    </body>
 
 </html>
