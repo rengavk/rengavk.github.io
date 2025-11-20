@@ -5,231 +5,579 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Renganayaki Venkatakrishnan | Data Analysis Portfolio</title>
+    <title>Renganayaki Venkatakrishnan | Data Scientist Portfolio</title>
 
     <link rel="icon" type="image/png" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/favicon-32x32.png">
 
-    <!-- Google Fonts for Elegant Typography -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Your Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero .location {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* About */
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-centercenter;
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skill-tag {
+            background: var(--bg-white);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Projects */
+        .projects-section {
+            background: var(--bg-white);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .contact-section .section-title {
+            color: white;
+        }
+
+        .contact-section .section-title::after {
+            background: white;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 50px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                padding: 30px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER SECTION -->
-    <header>
-        <div class="container">
+    <section class="hero">
+        <div class="hero-content">
             <h1>Renganayaki Venkatakrishnan</h1>
-            <p>Data Scientist | Power BI Developer |Statistician</p>
+            <p class="subtitle">Data Scientist | ML Engineer | AI Ethics Advocate</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Based in India</p>
+
             <div class="social-links">
-                <!--💡UPDATE: Add your social media links and CV file-->
-                <a href="https://www.linkedin.com/in/renganayaki-venkatakrishnan-349a61186/" target="_blank"
-                    title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/rengavk" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="assets/Your_Name_CV.pdf" download title="Download CV"><i
-                        class="fas fa-file-arrow-down"></i></a>
-            </div>
-        </div>
-    </header>
-
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="container">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <!--💡UPDATE: Change the image to your own profile photo in assets/images/-->
-                <img src="assets/images/profile.jpg" alt="Your Name" class="profile-photo">
-                <div class="about-text">
-                    <p> I'm a data professional with expertise in transforming complex datasets into actionable
-                        insights. My work focuses on creating interactive visualizations and data-driven stories that
-                        help organizations make informed decisions.</p>
-                    <p>With experience in Power BI, SQL, and data modeling, I specialize in developing comprehensive
-                        reports that reveal hidden patterns and trends in data. This portfolio showcases my projects
-                        across various sectors.</p>
-                </div>
+                <a href="https://www.linkedin.com/in/renganayaki-venkatakrishnan-349a61186/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/rengavk" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:renganayaki.venkatakrishnan00@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
+    <section class="section">
         <div class="container">
-            <h2>My Projects</h2>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm a data professional with expertise in transforming complex datasets into actionable insights. My
+                    work focuses on creating interactive visualizations and data-driven stories that help organizations
+                    make informed decisions.</p>
+                <p>With experience in Power BI, SQL, and data modeling, I specialize in developing comprehensive reports
+                    that reveal hidden patterns and trends in data. I'm passionate about leveraging machine learning,
+                    NLP, and ethical AI to solve real-world problems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--bg-white);">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">XGBoost</span>
+                <span class="skill-tag">LSTM</span>
+                <span class="skill-tag">NLP</span>
+                <span class="skill-tag">BERT</span>
+                <span class="skill-tag">Differential Privacy</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Tableau</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Streamlit</span>
+                <span class="skill-tag">SHAP</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
 
-                <!-- Project 1 -->
                 <div class="project-card">
-                    <!--💡UPDATE: Add a preview image of your project to assets/images/ -->
-                    <img src="assets/images/project-placeholder-1.png" alt="Aviation Project Preview">
-                    <div class="project-card-content">
-                        <h3>Aviation — Turnaround Delay Root-Cause Miner & Optimizer</h3>
-                        <p>ML-powered delay predictor achieving 99.99% accuracy with XGBoost and SHAP. Identifies root
-                            causes and provides actionable insights to reduce delays by 6-12%, potentially saving
-                            $111K-$223K annually.</p>
+                    <img src="assets/images/project-placeholder-1.png" alt="Aviation" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Aviation — Turnaround Delay Root-Cause Miner & Optimizer</h3>
+                        <div class="project-tags">
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">SHAP</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <p class="project-description">ML-powered delay predictor achieving 99.99% accuracy. Identifies
+                            root causes and provides insights to reduce delays by 6-12%, potentially saving $111K-$223K
+                            annually.</p>
                         <div class="project-buttons">
                             <a href="https://github.com/rengavk/aviation-turnaround-optimizer" target="_blank"
-                                class="btn">View on GitHub</a>
+                                class="btn btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
                             <a href="https://github.com/rengavk/aviation-turnaround-optimizer#readme" target="_blank"
-                                class="btn btn-secondary">Documentation</a>
+                                class="btn btn-secondary">
+                                Read More
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-card">
-                        <img src="assets/images/project-placeholder-3.png" alt="Supply Chain Project Preview">
-                        <div class="project-card-content">
-                            <h3>Supply Chain — Multi-Echelon Inventory Simulator</h3>
-                            <p>Discrete-event simulation reducing stockouts by 30% across
-                                Factory→Warehouse→Distributor→Retailer. Uses SimPy for simulation and OR-Tools for
-                                optimization. Demonstrates service level improvement from 85% to 95%.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/rengavk/supply-chain-simulator" target="_blank"
-                                    class="btn">View
-                                    on GitHub</a>
-                                <a href="https://github.com/rengavk/supply-chain-simulator#readme" target="_blank"
-                                    class="btn btn-secondary">Documentation</a>
-                            </div>
+                    <img src="assets/images/project-placeholder-2.png" alt="Mental Health" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Mental Health — Ethical Crisis-Signal NLP</h3>
+                        <div class="project-tags">
+                            <span class="tag">DistilBERT</span>
+                            <span class="tag">Differential Privacy</span>
+                            <span class="tag">AI Ethics</span>
+                        </div>
+                        <p class="project-description">Privacy-preserving crisis detection using differential privacy (ε
+                            <3.0) and DistilBERT. Includes comprehensive safety policy and ethical AI framework.</p>
+                                <div class="project-buttons">
+                                    <a href="https://github.com/rengavk/mental-health-nlp" target="_blank"
+                                        class="btn btn-primary">
+                                        <i class="fab fa-github"></i> View Code
+                                    </a>
+                                    <a href="https://github.com/rengavk/mental-health-nlp/blob/main/SAFETY_POLICY.md"
+                                        target="_blank" class="btn btn-secondary">
+                                        Safety Policy
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="assets/images/project-placeholder-3.png" alt="Supply Chain" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Supply Chain — Multi-Echelon Inventory Simulator</h3>
+                        <div class="project-tags">
+                            <span class="tag">SimPy</span>
+                            <span class="tag">OR-Tools</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                        <p class="project-description">Discrete-event simulation reducing stockouts by 30%. Uses SimPy
+                            and OR-Tools for optimization. Service level improvement from 85% to 95%.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/rengavk/supply-chain-simulator" target="_blank"
+                                class="btn btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://github.com/rengavk/supply-chain-simulator#readme" target="_blank"
+                                class="btn btn-secondary">
+                                Read More
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <img src="assets/images/project-placeholder-4.png" alt="Cardiac Arrest Project Preview">
-                        <div class="project-card-content">
-                            <h3>Early Warning System for Cardiac Arrest</h3>
-                            <p>LSTM-based predictive system providing 30-minute advance warning of cardiac arrest using
-                                real-time vital signs (HR, BP, SpO₂, ECG). Achieves 85%+ precision, enabling timely ICU
-                                interventions and potentially improving survival rates.</p>
-                            <div class="project-buttons">
-                                <a href="https://github.com/rengavk/cardiac-arrest-prediction" target="_blank"
-                                    class="btn">View on GitHub</a>
-                                <a href="https://github.com/rengavk/cardiac-arrest-prediction#readme" target="_blank"
-                                    class="btn btn-secondary">Documentation</a>
-                            </div>
+                <div class="project-card">
+                    <img src="assets/images/project-placeholder-4.png" alt="Cardiac Arrest" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-title">Early Warning System for Cardiac Arrest</h3>
+                        <div class="project-tags">
+                            <span class="tag">LSTM</span>
+                            <span class="tag">Healthcare AI</span>
+                            <span class="tag">TensorFlow</span>
+                        </div>
+                        <p class="project-description">LSTM-based system providing 30-minute advance warning using
+                            real-time vital signs. Achieves 85%+ precision, enabling timely ICU interventions.</p>
+                        <div class="project-buttons">
+                            <a href="https://github.com/rengavk/cardiac-arrest-prediction" target="_blank"
+                                class="btn btn-primary">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://github.com/rengavk/cardiac-arrest-prediction#readme" target="_blank"
+                                class="btn btn-secondary">
+                                Read More
+                            </a>
                         </div>
                     </div>
-
-                </div>
-            </div>
-    </section>
-
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Technical Skillset</h2>
-            <div class="skills-table">
-
-                <!-- Column 1: Data Visualization -->
-                <div class="skill-column">
-                    <div class="skill-header">
-                        <i class="fas fa-chart-pie"></i>
-                        <h3>Data Visualization</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li>Power BI</li>
-                        <li>Tableau</li>
-                        <li>Looker Studio</li>
-                        <li>Excel Dashboards</li>
-                    </ul>
-                </div>
-
-                <!-- Column 2: Data Analysis -->
-                <div class="skill-column">
-                    <div class="skill-header">
-                        <i class="fas fa-search-plus"></i>
-                        <h3>Data Analysis</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li>SQL</li>
-                        <li>Advanced Excel</li>
-                        <li>Python (Pandas)</li>
-                        <li>Google Sheets</li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Data Modeling & ETL -->
-                <div class="skill-column">
-                    <div class="skill-header">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Data Modeling & ETL</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li>Power Query (M)</li>
-                        <li>DAX</li>
-                        <li>ETL Processes</li>
-                    </ul>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- CONTACT FORM SECTION -->
-    <section id="contact" class="section">
+    <section class="section contact-section">
         <div class="container">
-            <h2>Send me a message</h2>
-
-            <form action="https://formsubmit.co/renganayaki.venkatakrishnan00@gmail.com" method="POST"
-                class="contact-form">
-                <p> Interested in collaborating or have questions about my work? I'd love to hear from you!</p>
-
-                <!-- Form Fields -->
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Your name" required>
+            <div class="contact-content">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="contact-info">Interested in collaborating? I'd love to hear from you!</p>
+                <div class="contact-buttons">
+                    <a href="mailto:renganayaki.venkatakrishnan00@gmail.com" class="contact-btn">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/renganayaki-venkatakrishnan-349a61186/" target="_blank"
+                        class="contact-btn">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/rengavk" target="_blank" class="contact-btn">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Your email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" rows="6" placeholder="Your message" required></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="btn">Send Message</button>
-
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Renganayaki Venkatakrishnan. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 Renganayaki Venkatakrishnan. All rights reserved.</p>
     </footer>
-
-    <script src="assets/js/main.js"></script>
 
 </body>
 
