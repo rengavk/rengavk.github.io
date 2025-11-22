@@ -99,6 +99,22 @@
             transform: translateY(-3px);
         }
 
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.05);
+        }
+
         /* Sections */
         .section {
             padding: 80px 20px;
@@ -377,6 +393,7 @@
 
     <section class="hero">
         <div class="hero-content">
+            <img src="assets/images/profile.jpg" alt="Renganayaki Venkatakrishnan" class="profile-picture">
             <h1>Renganayaki Venkatakrishnan</h1>
             <p class="subtitle">Data Science | Business Intelligence | Statistics</p>
 
