@@ -23,8 +23,6 @@ Welcome to my portfolio, I have published works here to showcase my skills in:
 
 ## 🛠️ Skills
 
-Update the `index.html` file to reflect your personal technical skillset. The template is organized into key categories:
-
 - **Data Visualization**: Power BI, Tableau, Matplotlib
 - **Data Analysis**: SQL, Python (Pandas), R, Excel, SPSS
 - **Data Modeling**: Power Query, DAX, Star Schema Design
