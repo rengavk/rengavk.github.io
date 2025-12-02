@@ -1,0 +1,11 @@
+# Commands to push Aviation Project to GitHub
+
+# After creating the repository on GitHub, run these commands:
+
+cd c:/Users/renga/.gemini/antigravity/playground/silent-interstellar/aviation-turnaround-optimizer
+
+git remote add origin https://github.com/rengavk/aviation-turnaround-optimizer.git
+git branch -M main
+git push -u origin main
+
+# Then update the portfolio link in index.html
